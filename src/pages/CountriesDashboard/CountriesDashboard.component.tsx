@@ -41,12 +41,10 @@ export const CountriesDashboard = () => {
   const [nameFilter, setNameFilter] = useState("");
 
   const { countriesError, loadingCountries } = useCountries();
-
   const { continentsError } = useContinents();
 
   const continents = useSelector(selectContinents);
   const activeContinent = useSelector(selectActiveContinent);
-
   const countries = useSelector(selectCountries);
 
   const handleContinentChange = ({ target }: SelectChangeEvent) => {
